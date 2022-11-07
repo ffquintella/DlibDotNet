@@ -7,6 +7,7 @@ $targets = @(
    "CUDA-110",
    "CUDA-111",
    "CUDA-112",
+   "CUDA-118",
    "MKL",
    "Xamarin"
 )

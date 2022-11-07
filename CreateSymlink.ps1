@@ -69,6 +69,20 @@ $tmp111.Add("$env:CUDA_PATH_V11_1\bin\cudnn64_8.dll")
 $tmp111.Add("$env:CUDA_PATH_V11_1\bin\curand64_10.dll")
 $tmp111.Add("$env:CUDA_PATH_V11_1\bin\cusolver64_11.dll")
 
+# For DlibDotNet.CUDA118
+$tmp118 = New-Object 'System.Collections.Generic.List[string]'
+$tmp118.Add("$env:CUDA_PATH_V11_1\bin\cublas64_11.dll")
+$tmp118.Add("$env:CUDA_PATH_V11_1\bin\cublasLt64_11.dll")
+$tmp118.Add("$env:CUDA_PATH_V11_1\bin\cudnn_adv_infer64_8.dll")
+$tmp118.Add("$env:CUDA_PATH_V11_1\bin\cudnn_adv_train64_8.dll")
+$tmp118.Add("$env:CUDA_PATH_V11_1\bin\cudnn_cnn_infer64_8.dll")
+$tmp118.Add("$env:CUDA_PATH_V11_1\bin\cudnn_cnn_train64_8.dll")
+$tmp118.Add("$env:CUDA_PATH_V11_1\bin\cudnn_ops_infer64_8.dll")
+$tmp118.Add("$env:CUDA_PATH_V11_1\bin\cudnn_ops_train64_8.dll")
+$tmp118.Add("$env:CUDA_PATH_V11_1\bin\cudnn64_8.dll")
+$tmp118.Add("$env:CUDA_PATH_V11_1\bin\curand64_10.dll")
+$tmp118.Add("$env:CUDA_PATH_V11_1\bin\cusolver64_11.dll")
+
 $BuildTargets = @()
 $BuildTargets += New-Object PSObject -Property @{Package = "92";  Dependencies = $tmp92    }
 $BuildTargets += New-Object PSObject -Property @{Package = "100"; Dependencies = $tmp100   }
@@ -76,6 +90,7 @@ $BuildTargets += New-Object PSObject -Property @{Package = "101"; Dependencies =
 $BuildTargets += New-Object PSObject -Property @{Package = "102"; Dependencies = $tmp102   }
 $BuildTargets += New-Object PSObject -Property @{Package = "110"; Dependencies = $tmp110   }
 $BuildTargets += New-Object PSObject -Property @{Package = "111"; Dependencies = $tmp111   }
+$BuildTargets += New-Object PSObject -Property @{Package = "118"; Dependencies = $tmp118   }
 
 # Store current directory
 $DlibDotNetRoot = $PSScriptRoot

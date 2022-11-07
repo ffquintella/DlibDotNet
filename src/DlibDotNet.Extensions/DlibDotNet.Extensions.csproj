@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <Authors>Takuya Takeuchi</Authors>
     <Description>Extension package for DlibDotNet</Description>
     <Company />
@@ -47,7 +47,7 @@
 
   <ItemGroup Condition="$(TargetFramework.Contains('netstandard')) Or $(TargetFramework.Contains('netcoreapp')) ">
     <PackageReference Include="System.Drawing.Common">
-      <Version>4.7.0</Version>
+      <Version>6.0.0</Version>
     </PackageReference>
   </ItemGroup>
 

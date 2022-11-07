@@ -39,6 +39,7 @@ $BuildTargets += [BuildTarget]::new("desktop", "cuda", 64, "$OperatingSystem-x64
 $BuildTargets += [BuildTarget]::new("desktop", "cuda", 64, "$OperatingSystem-x64", "", 110               )
 $BuildTargets += [BuildTarget]::new("desktop", "cuda", 64, "$OperatingSystem-x64", "", 111               )
 $BuildTargets += [BuildTarget]::new("desktop", "cuda", 64, "$OperatingSystem-x64", "", 112               )
+$BuildTargets += [BuildTarget]::new("desktop", "cuda", 64, "$OperatingSystem-x64", "", 118               )
 
 foreach ($BuildTarget in $BuildTargets)
 {

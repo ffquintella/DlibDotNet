@@ -58,7 +58,7 @@ cmake_install.cmake
 install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
-build
+
 
 # .NET Core
 project.lock.json
@@ -326,4 +326,6 @@ work
 .DS_Store
 .nuke/
 
-output/package/
+output/
+
+

@@ -325,3 +325,5 @@ work
 
 .DS_Store
 .nuke/
+
+output/package/

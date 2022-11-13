@@ -135,7 +135,7 @@ class Build : NukeBuild
 
         });
 
-    Target PeparePack => _ => _
+    Target Package => _ => _
         .DependsOn(Print)
         .DependsOn(CleanPkg)
         .Executes(() =>

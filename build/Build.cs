@@ -40,6 +40,10 @@ class Build : NukeBuild
     [PathExecutable]
     readonly Tool Pwsh;
 
+    
+
+    [LocalExecutable("./nuget/nuget.exe")]
+    readonly Tool Nuget;
 
     Target Clean => _ => _
         .Before(Restore)
@@ -163,6 +167,15 @@ class Build : NukeBuild
 
             File.Copy(SourceDirectory / ".." / "nuget" / "nuspec" / "DlibDotNet.CUDA-118.nuspec",
                 OutputPackDirectory / "DlibDotNet.CUDA-118.nuspec");
+
+            //File.Copy(SourceDirectory / ".." / "nuget" /  "nuget.exe", OutputPackDirectory / "nuget.exe");
+
+
+            var nufile = OutputPackDirectory / "DlibDotNet.CUDA-118.nuspec";
+
+            Nuget(
+                arguments: $"pack {nufile.ToString()} -OutputDirectory {OutputPackDirectory.ToString()} -Version {Version}",
+                workingDirectory: OutputPackDirectory);
 
             //File.Copy(Path.Combine(OutputBuildDirectory, "DlibDotNet.dll"), Path.Combine(OutputPackDirectory, "DlibDotNet.dll"));
 

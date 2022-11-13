@@ -27,7 +27,7 @@ class Build : NukeBuild
 
     [GitRepository] readonly GitRepository Repository;
 
-    string Version => Repository?.Tags?.FirstOrDefault() ?? "0.0.0";
+    string Version => Repository?.Tags?.FirstOrDefault() ?? "1.0.2";
 
     public static int Main () => Execute<Build>(x => x.Compile);
 

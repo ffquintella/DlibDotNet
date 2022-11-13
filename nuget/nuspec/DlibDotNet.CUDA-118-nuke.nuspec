@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>DlibDotNet.CUDA118</id>
+    <version>19.21.0.20220724</version>
+    <title>DlibDotNet for CUDA 11.8</title>
+    <authors>Takuya Takeuchi</authors>
+    <owners>Takuya Takeuchi</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE.txt</license>
+    <projectUrl>https://github.com/takuya-takeuchi/DlibDotNet</projectUrl>
+    <icon>images\ml128.png</icon>
+    <description>Dlib wrapper library written in C++ and C# for Windows, MacOS and Linux
+
+Requirements: Visual C++ 2022 Redistributable Package and cudnn 8</description>
+    <releaseNotes></releaseNotes>
+    <copyright>© Takuya Takeuchi 2017-2021</copyright>
+    <tags>dlib .net machinelearning</tags>
+    <serviceable>true</serviceable>
+    <dependencies>
+      <group targetFramework="netstandard2.1">
+        <dependency id="System.Drawing.Common" version="6.0.0" />
+      </group>
+    </dependencies>
+  </metadata>
+
+  <files>
+    <file src="ml128.png" target="images\" />
+
+
+    <!-- cross-targetting via compile-time references -->
+    <file src="ref\**\*" target="ref" />
+
+    <file src="DlibDotNet.dll" target="lib\netstandard2.1" />
+
+    <file src="DlibDotNetNative.dll" target="runtimes\win-x64\native\DlibDotNetNative.dll" />
+    <file src="DlibDotNetNativeDnn.dll" target="runtimes\win-x64\native\DlibDotNetNativeDnn.dll" />
+
+    
+    <!-- license -->
+    <file src="LICENSE.txt" target="licenses" />
+  
+  </files>
+
+</package>

@@ -165,10 +165,14 @@ class Build : NukeBuild
             File.Copy(SourceDirectory / "DlibDotNet.Native.Dnn" / "build_win_desktop_cuda-118_x64" / "Release" / "DlibDotNetNativeDnn.dll",
                 OutputPackDirectory / "DlibDotNetNativeDnn.dll");
 
-            File.Copy(SourceDirectory / ".." / "nuget" / "nuspec" / "DlibDotNet.CUDA-118.nuspec",
+            File.Copy(SourceDirectory / ".." / "nuget" / "nuspec" / "DlibDotNet.CUDA-118-nuke.nuspec",
                 OutputPackDirectory / "DlibDotNet.CUDA-118.nuspec");
 
-            //File.Copy(SourceDirectory / ".." / "nuget" /  "nuget.exe", OutputPackDirectory / "nuget.exe");
+            File.Copy(SourceDirectory / ".." / "nuget" / "ml128.png",
+                OutputPackDirectory / "ml128.png");
+
+            File.Copy(SourceDirectory / ".." /  "LICENSE.txt",
+                OutputPackDirectory / "LICENSE.txt");
 
 
             var nufile = OutputPackDirectory / "DlibDotNet.CUDA-118.nuspec";

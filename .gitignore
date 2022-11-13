@@ -324,3 +324,4 @@ nuget/*.nupkg
 work
 
 .DS_Store
+.nuke/
